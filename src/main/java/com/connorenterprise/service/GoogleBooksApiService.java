@@ -31,6 +31,6 @@ public class GoogleBooksApiService {
     public String searchByIsbn(String isbn) throws JsonProcessingException {
         GoogleBook books =
                 objectMapper.readValue(googleBooksApiRestTemplate.getForObject("/volumes?q=isbn:{isbn}", String.class, isbn), GoogleBook.class);
-        return "Book corresponding to isbn " + isbn + " is: " + books.getItems()[0].getVolumeInfo().getTitle();
+        return books.getItems() != null ? books.getItems()[0].getVolumeInfo().getTitle() : null;
     }
 }

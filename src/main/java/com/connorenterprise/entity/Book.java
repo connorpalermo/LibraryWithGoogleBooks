@@ -1,6 +1,5 @@
 package com.connorenterprise.entity;
 
-import com.connorenterprise.repository.Author;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -50,6 +49,17 @@ public class Book {
         this.bookPublisher = "Fake Person";
         this.description = "Who cares, it doesn't exist";
         this.isbn = "123-456-789";
+        this.author = null;
+        this.publisher = null;
+    }
+
+    public Book(String bookName, String bookAuthor, String bookPublisher, String description, String isbn){
+        this.id=0;
+        this.bookName = bookName;
+        this.bookAuthor = bookAuthor;
+        this.bookPublisher = bookPublisher;
+        this.description = description;
+        this.isbn = isbn;
         this.author = null;
         this.publisher = null;
     }

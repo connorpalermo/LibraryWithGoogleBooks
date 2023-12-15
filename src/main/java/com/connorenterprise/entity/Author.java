@@ -1,4 +1,4 @@
-package com.connorenterprise.repository;
+package com.connorenterprise.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
